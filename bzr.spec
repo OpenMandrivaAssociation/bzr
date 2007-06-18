@@ -3,13 +3,14 @@
 # split the doc ?
 
 Name:           bzr
-Version:        0.16
+Version:        0.17
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control 
 Group:          Development/Other
 License:        GPL
 URL:            http://www.bazaar-vcs.org/
 Source0:        http://bazaar-vcs.org/releases/src/%{name}-%{version}.tar.gz
+Source1:	%{name}-%{version}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-paramiko
