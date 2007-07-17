@@ -3,7 +3,7 @@
 # split the doc ?
 
 Name:           bzr
-Version:        0.17
+Version:        0.18
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control 
 Group:          Development/Other
@@ -15,6 +15,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-paramiko
 Requires:       python-urlgrabber python-celementtree
+Requires:	python-pyrex
 %define _provides_exceptions perl(
 # force buildir to be able to run test on build cluster
 %define _builddir /tmp
