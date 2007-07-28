@@ -15,7 +15,6 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:      noarch
 BuildRequires:  python-devel python-paramiko
 Requires:       python-urlgrabber python-celementtree
-Requires:	python-pyrex
 %define _provides_exceptions perl(
 # force buildir to be able to run test on build cluster
 %define _builddir /tmp
