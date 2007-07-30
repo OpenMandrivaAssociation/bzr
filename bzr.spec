@@ -4,7 +4,7 @@
 
 Name:           bzr
 Version:        0.18
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Next-generation distributed version control 
 Group:          Development/Other
 License:        GPL
