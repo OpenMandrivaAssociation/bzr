@@ -67,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %_bindir/bzr
 %py_puresitedir/bzrlib/
 %py_platsitedir/bzrlib/*.so
-%py_puresitedir/*egg-info
+%py_platsitedir/*egg-info
 %_mandir/man1/*
 %config(noreplace) %{_sysconfdir}/bash_completion.d/bzr
 
