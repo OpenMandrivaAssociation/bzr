@@ -3,8 +3,8 @@
 # split the doc ?
 
 Name:           bzr
-Version:        0.18
-Release:        %mkrel 2
+Version:        0.90
+Release:        %mkrel 1
 Summary:        Next-generation distributed version control 
 Group:          Development/Other
 License:        GPL
@@ -13,7 +13,7 @@ Source0:        http://bazaar-vcs.org/releases/src/%{name}-%{version}.tar.gz
 Source1:	%{name}-%{version}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:      noarch
-BuildRequires:  python-devel python-paramiko
+BuildRequires:  python-devel python-paramiko python-pyrex
 Requires:       python-urlgrabber python-celementtree
 %define _provides_exceptions perl(
 # force buildir to be able to run test on build cluster
@@ -67,6 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc  doc contrib README TODO tools
 %_bindir/bzr
 %py_puresitedir/bzrlib/
+%py_platsitedir/bzrlib/*.so
 %py_puresitedir/*egg-info
 %_mandir/man1/*
 %config(noreplace) %{_sysconfdir}/bash_completion.d/bzr
