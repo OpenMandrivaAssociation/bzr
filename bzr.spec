@@ -63,7 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
-%doc  doc contrib README TODO tools
+%doc  doc contrib NEWS COPYING.txt README INSTALL TODO tools
 %_bindir/bzr
 %py_platsitedir/bzrlib/
 %py_platsitedir/*egg-info
