@@ -3,9 +3,9 @@
 # split the doc ?
 
 Name:           bzr
-Version:        0.90
+Version:        0.91
 Release:        %mkrel 1
-Summary:        Next-generation distributed version control 
+Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPL
 URL:            http://www.bazaar-vcs.org/
@@ -20,9 +20,9 @@ Requires:       python-urlgrabber python-celementtree
 
 %description
 Bazaar-NG (or bzr) is a project of Canonical to develop an open source
-distributed version control system that is powerful, friendly, and scalable. 
-Version control means a system that keeps track of previous revisions of 
-software source code or similar information and helps people work on it 
+distributed version control system that is powerful, friendly, and scalable.
+Version control means a system that keeps track of previous revisions of
+software source code or similar information and helps people work on it
 in teams.
 
 %prep
@@ -52,7 +52,7 @@ mv $RPM_BUILD_ROOT/%_prefix/man/* $RPM_BUILD_ROOT/%_mandir/
 rm -Rf $RPM_BUILD_ROOT/%py_puresitedir/bzrlib/util/urlgrabber
 rm -Rf $RPM_BUILD_ROOT/%py_puresitedir/bzrlib/util/elementtree
 
-find $RPM_BUILD_ROOT/%py_puresitedir -name '*.pyc' | xargs rm -f 
+find $RPM_BUILD_ROOT/%py_puresitedir -name '*.pyc' | xargs rm -f
 
 # install bash completion
 mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/bash_completion.d/
