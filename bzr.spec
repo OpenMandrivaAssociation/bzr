@@ -3,7 +3,7 @@
 # split the doc ?
 
 Name:           bzr
-Version:        0.91
+Version:        0.92
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
