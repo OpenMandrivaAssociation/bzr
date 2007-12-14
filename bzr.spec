@@ -3,7 +3,8 @@
 # split the doc ?
 
 Name:           bzr
-Version:        0.92
+Epoch:          0
+Version:        1.0
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
@@ -69,5 +70,4 @@ rm -rf $RPM_BUILD_ROOT
 %py_platsitedir/*egg-info
 %_mandir/man1/*
 %config(noreplace) %{_sysconfdir}/bash_completion.d/bzr
-
 
