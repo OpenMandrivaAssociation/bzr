@@ -12,7 +12,6 @@ License:        GPL
 URL:            http://www.bazaar-vcs.org/
 Source0:        http://bazaar-vcs.org/releases/src/%{name}-%{version}.tar.gz
 Source1:	%{name}-%{version}.tar.gz.sig
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko python-pyrex
 Requires:       python-urlgrabber python-celementtree
 %define _provides_exceptions perl(
