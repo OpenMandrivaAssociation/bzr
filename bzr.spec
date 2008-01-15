@@ -20,11 +20,13 @@ Requires:       python-urlgrabber python-celementtree
 %define _builddir /tmp
 
 %description
-Bazaar-NG (or bzr) is a project of Canonical to develop an open source
-distributed version control system that is powerful, friendly, and scalable.
-Version control means a system that keeps track of previous revisions of
-software source code or similar information and helps people work on it
-in teams.
+Bazaar is a distributed revision control system. It allows team members to
+branch and merge upstream code very easily.
+
+Distributed revision control systems allow multiple people to have their
+own branch of a project, and merge code efficiently between them. This
+enables new contributors to immediately have access to the full tools that
+previously have been limited to just the committers to a project.
 
 %prep
 %setup -q
@@ -70,4 +72,3 @@ rm -rf $RPM_BUILD_ROOT
 %py_platsitedir/*egg-info
 %_mandir/man1/*
 %config(noreplace) %{_sysconfdir}/bash_completion.d/bzr
-
