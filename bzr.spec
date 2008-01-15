@@ -4,14 +4,14 @@
 
 Name:           bzr
 Epoch:          0
-Version:        1.0
+Version:        1.1
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPL
 URL:            http://www.bazaar-vcs.org/
 Source0:        http://bazaar-vcs.org/releases/src/%{name}-%{version}.tar.gz
-Source1:	%{name}-%{version}.tar.gz.sig
+Source1:	%{name}-%{version}.tar.gz.asc
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko python-pyrex
 Requires:       python-urlgrabber python-celementtree
