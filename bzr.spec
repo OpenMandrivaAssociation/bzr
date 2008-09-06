@@ -4,11 +4,11 @@
 
 Name:           bzr
 Epoch:          0
-Version:        1.6
+Version:        1.6.1
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
-License:        GPL
+License:        GPLv2+
 URL:            http://www.bazaar-vcs.org/
 Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
@@ -47,26 +47,26 @@ export TMPDIR=/tmp
 #./bzr selftest
 
 %install
-rm -rf $RPM_BUILD_ROOT
-python setup.py install --prefix=$RPM_BUILD_ROOT/%_prefix
-mkdir -p $RPM_BUILD_ROOT/%_mandir/
-mv $RPM_BUILD_ROOT/%_prefix/man/* $RPM_BUILD_ROOT/%_mandir/
+rm -rf %{buildroot}
+python setup.py install --prefix=%{buildroot}/%_prefix
+mkdir -p %{buildroot}/%_mandir/
+mv %{buildroot}/%_prefix/man/* %{buildroot}/%_mandir/
 # remove as they are packaged externally
-rm -Rf $RPM_BUILD_ROOT/%py_puresitedir/bzrlib/util/urlgrabber
-rm -Rf $RPM_BUILD_ROOT/%py_puresitedir/bzrlib/util/elementtree
+rm -Rf %{buildroot}/%py_puresitedir/bzrlib/util/urlgrabber
+rm -Rf %{buildroot}/%py_puresitedir/bzrlib/util/elementtree
 
-find $RPM_BUILD_ROOT/%py_puresitedir -name '*.pyc' | xargs rm -f
+find %{buildroot}/%py_puresitedir -name '*.pyc' | xargs rm -f
 
 # install bash completion
-mkdir -p $RPM_BUILD_ROOT/%{_sysconfdir}/bash_completion.d/
-cp contrib/bash/bzr $RPM_BUILD_ROOT/%{_sysconfdir}/bash_completion.d/
+mkdir -p %{buildroot}/%{_sysconfdir}/bash_completion.d/
+cp contrib/bash/bzr %{buildroot}/%{_sysconfdir}/bash_completion.d/
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc  doc contrib NEWS COPYING.txt README INSTALL TODO tools
+%doc  doc contrib NEWS README TODO tools
 %_bindir/bzr
 %py_platsitedir/bzrlib/
 %py_platsitedir/*egg-info
