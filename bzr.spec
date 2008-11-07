@@ -4,7 +4,7 @@
 
 Name:           bzr
 Epoch:          0
-Version:        1.7.1
+Version:        1.9
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
@@ -14,7 +14,6 @@ Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko python-pyrex
-Requires:       python-urlgrabber python-celementtree
 %define _provides_exceptions perl(
 # force buildir to be able to run test on build cluster
 %define _builddir /tmp
@@ -52,7 +51,6 @@ python setup.py install --prefix=%{buildroot}/%_prefix
 mkdir -p %{buildroot}/%_mandir/
 mv %{buildroot}/%_prefix/man/* %{buildroot}/%_mandir/
 # remove as they are packaged externally
-rm -Rf %{buildroot}/%py_puresitedir/bzrlib/util/urlgrabber
 rm -Rf %{buildroot}/%py_puresitedir/bzrlib/util/elementtree
 
 find %{buildroot}/%py_puresitedir -name '*.pyc' | xargs rm -f
