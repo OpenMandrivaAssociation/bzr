@@ -5,7 +5,7 @@
 Name:           bzr
 Epoch:          0
 Version:        1.10
-Release:        %mkrel 2
+Release:        %mkrel 3
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
@@ -14,7 +14,6 @@ Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko python-pyrex
-Obsoletes:	bazaar
 %define _provides_exceptions perl(
 # force buildir to be able to run test on build cluster
 %define _builddir /tmp
