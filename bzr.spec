@@ -5,7 +5,7 @@
 Name:           bzr
 Epoch:          0
 Version:        1.10
-Release:        %mkrel 3
+Release:        %mkrel 4
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
