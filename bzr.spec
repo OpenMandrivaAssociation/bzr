@@ -4,7 +4,7 @@
 
 Name:           bzr
 Epoch:          0
-Version:        1.11
+Version:        1.12
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
