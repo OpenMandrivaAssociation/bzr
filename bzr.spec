@@ -13,7 +13,7 @@ URL:            http://www.bazaar-vcs.org/
 Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
-BuildRequires:  python-devel python-paramiko python-pyrex zlib-devel
+BuildRequires:  python-devel python-paramiko zlib-devel
 %define _provides_exceptions perl(
 # force buildir to be able to run test on build cluster
 %define _builddir /tmp
