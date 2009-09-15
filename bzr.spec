@@ -1,17 +1,18 @@
 # TODO
 # split the tools from main package ?
 # split the doc ?
+%define pre rc2
 
 Name:           bzr
 Epoch:          0
-Version:        1.18.1
-Release:        %mkrel 1
+Version:        2.0
+Release:        %mkrel 0.1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
 URL:            http://www.bazaar-vcs.org/
-Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
-Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
+Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}%{pre}.tar.gz
+Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}%{pre}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko zlib-devel
 %define _provides_exceptions perl(
@@ -28,7 +29,7 @@ enables new contributors to immediately have access to the full tools that
 previously have been limited to just the committers to a project.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{version}%{pre}
 
 %check
 # run test in /tmp to avoid lock problems with nfs on build cluster
