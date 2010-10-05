@@ -14,8 +14,6 @@ Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko zlib-devel
 %define _provides_exceptions perl(
-# force buildir to be able to run test on build cluster
-%define _builddir /tmp
 
 %description
 Bazaar is a distributed revision control system. It allows team members to
@@ -50,9 +48,9 @@ python setup.py install --prefix=%{buildroot}/%_prefix
 mkdir -p %{buildroot}/%_mandir/
 mv %{buildroot}/%_prefix/man/* %{buildroot}/%_mandir/
 # remove as they are packaged externally
-rm -Rf %{buildroot}/%py_puresitedir/bzrlib/util/elementtree
+rm -Rf %{buildroot}/%py_platsitedir/bzrlib/util/elementtree
 
-find %{buildroot}/%py_puresitedir -name '*.pyc' | xargs rm -f
+find %{buildroot}/%py_platsitedir -name '*.pyc' | xargs rm -f
 
 # install bash completion
 mkdir -p %{buildroot}/%{_sysconfdir}/bash_completion.d/
