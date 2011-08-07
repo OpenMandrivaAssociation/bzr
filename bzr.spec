@@ -3,7 +3,7 @@
 # split the doc ?
 Name:           bzr
 Epoch:          0
-Version:        2.3.1
+Version:        2.3.4
 Release:        %mkrel 1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
