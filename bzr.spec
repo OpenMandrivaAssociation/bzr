@@ -4,7 +4,7 @@
 Name:           bzr
 Epoch:          0
 Version:        2.5.1
-Release:        1
+Release:        2
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
@@ -61,7 +61,7 @@ rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
-%doc  doc contrib NEWS README TODO tools
+%doc  doc contrib NEWS README TODO
 %_bindir/bzr
 %py_platsitedir/bzrlib/
 %py_platsitedir/*egg-info
