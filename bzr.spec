@@ -3,8 +3,8 @@
 # split the doc ?
 Name:           bzr
 Epoch:          0
-Version:        2.5.0
-Release:        %mkrel 1
+Version:        2.5.1
+Release:        1
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
