@@ -13,7 +13,6 @@ Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
 BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko zlib-devel
-%define _provides_exceptions perl(
 
 %description
 Bazaar is a distributed revision control system. It allows team members to
