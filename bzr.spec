@@ -11,7 +11,6 @@ License:        GPLv2+
 URL:            http://www.bazaar-vcs.org/
 Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root-%(id -u -n)
 BuildRequires:  python-devel python-paramiko zlib-devel
 
 %description
@@ -42,7 +41,6 @@ export TMPDIR=/tmp
 #./bzr selftest
 
 %install
-rm -rf %{buildroot}
 python setup.py install --prefix=%{buildroot}/%_prefix
 mkdir -p %{buildroot}/%_mandir/
 mv %{buildroot}/%_prefix/man/* %{buildroot}/%_mandir/
@@ -55,11 +53,7 @@ find %{buildroot}/%py_platsitedir -name '*.pyc' | xargs rm -f
 mkdir -p %{buildroot}/%{_sysconfdir}/bash_completion.d/
 cp contrib/bash/bzr %{buildroot}/%{_sysconfdir}/bash_completion.d/
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root,-)
 %doc  doc contrib NEWS README TODO
 %_bindir/bzr
 %py_platsitedir/bzrlib/
