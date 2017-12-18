@@ -4,13 +4,14 @@
 Name:           bzr
 Epoch:          0
 Version:        2.7.0
-Release:        1
+Release:        2
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
 URL:            http://www.bazaar-vcs.org/
 Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
+Patch0:		0003-bzr-lazy-regex.patch
 BuildRequires:  pkgconfig(python) python2-paramiko zlib-devel
 
 %description
@@ -24,6 +25,7 @@ previously have been limited to just the committers to a project.
 
 %prep
 %setup -q -n %{name}-%{version}
+%patch0 -p0
 # Run through python2 for now...
 sed -i -e 's,env python,python2,g' bzr
 
