@@ -12,7 +12,7 @@ URL:            http://www.bazaar-vcs.org/
 Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
 Patch0:		0003-bzr-lazy-regex.patch
-BuildRequires:  pkgconfig(python) python2-paramiko zlib-devel
+BuildRequires:  pkgconfig(python2) python2-paramiko zlib-devel
 
 %description
 Bazaar is a distributed revision control system. It allows team members to
