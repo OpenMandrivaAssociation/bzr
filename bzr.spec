@@ -4,7 +4,7 @@
 Name:           bzr
 Epoch:          0
 Version:        2.7.0
-Release:        4
+Release:        5
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
