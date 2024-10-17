@@ -8,7 +8,7 @@ Release:        5
 Summary:        Next-generation distributed version control
 Group:          Development/Other
 License:        GPLv2+
-URL:            http://www.bazaar-vcs.org/
+URL:            https://www.bazaar-vcs.org/
 Source0:        https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz
 Source1:	https://launchpad.net/bzr/%{version}/%{version}/+download/bzr-%{version}.tar.gz.sig
 Patch0:		0003-bzr-lazy-regex.patch
